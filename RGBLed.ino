@@ -1,30 +1,32 @@
-// C++ code
-//
-int redPin = 11;
-int bluePin = 10;
-int greenPin = 9;
+int redPin = 9;
+int greenPin = 10;
+int bluePin = 11;
 
-void setup()
-{
+
+void setup() {
+  // put your setup code here, to run once:
   pinMode(redPin, OUTPUT);
-  pinMode(bluePin, OUTPUT);
   pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
 }
 
-void loop()
-{
+void loop() {
+  // put your main code here, to run repeatedly:
   digitalWrite(redPin, HIGH);
-  digitalWrite(bluePin, LOW);
   digitalWrite(greenPin, LOW);
-  delay(1000);
-  
-  digitalWrite(redPin, LOW);
-  digitalWrite(bluePin, HIGH);
-  digitalWrite(greenPin, LOW);
-  delay(1000);
-  
-  digitalWrite(redPin, LOW);
   digitalWrite(bluePin, LOW);
+
+  delay(500);
+
+  digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
-  delay(1000);
+  digitalWrite(bluePin, LOW);
+
+  delay(500);
+
+  digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, HIGH);
+
+  delay(500);
 }
